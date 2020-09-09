@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :genres
+  resources :artists
+  resources :songs
+  
+  get 'songs/index', to: 'songs#index'
+
 end
